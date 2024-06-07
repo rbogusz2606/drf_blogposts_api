@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-5mfsygv)&!umf4hpyahw%%y19$82hu(9l84$)(&@6jf=)5zy2p'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -78,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api.wsgi.app'
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
 # Database
